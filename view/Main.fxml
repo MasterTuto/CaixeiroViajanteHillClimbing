@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import java.util.ArrayList?>
+
+<Pane fx:id="mainAnchor" prefHeight="478.0" prefWidth="622.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainController">
+   <children>
+      <BorderPane layoutX="25.0" layoutY="78.0">
+         <center>
+            <ImageView fx:id="ivCity1" fitHeight="50.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" styleClass="city-selected">
+               <image>
+                  <Image url="@../assets/76-761306_modern-city-buildings-city-png-icon.png" />
+               </image>
+            </ImageView>
+         </center>
+      </BorderPane>
+      <AnchorPane layoutX="176.0" layoutY="78.0">
+         <children>
+            <ImageView fx:id="ivCity2" fitHeight="50.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/257-2575219_png-file-svg-city-icon-noun-project.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <BorderPane layoutX="353.0" layoutY="128.0">
+         <center>
+            <ImageView fx:id="ivCity4" fitHeight="50.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/36507.png" />
+               </image>
+            </ImageView>
+         </center>
+      </BorderPane>
+      <BorderPane layoutX="373.0" layoutY="232.0">
+         <center>
+            <ImageView fx:id="ivCity8" fitHeight="60.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/city-buildings.png" />
+               </image>
+            </ImageView>
+         </center>
+      </BorderPane>
+      <BorderPane layoutX="54.0" layoutY="237.0">
+         <center>
+            <ImageView fx:id="ivCity6" fitHeight="50.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/City_icon_(Noun_Project).svg.png" />
+               </image>
+            </ImageView>
+         </center>
+      </BorderPane>
+      <BorderPane layoutX="169.0" layoutY="317.0">
+         <center>
+            <ImageView fx:id="ivCity9" fitHeight="50.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/download.png" />
+               </image>
+            </ImageView>
+         </center>
+      </BorderPane>
+      <BorderPane layoutX="250.0" layoutY="187.0">
+         <center>
+            <ImageView fx:id="ivCity5" fitHeight="50.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/4528793.png" />
+               </image>
+            </ImageView>
+         </center>
+      </BorderPane>
+      <BorderPane layoutX="492.0" layoutY="292.0">
+         <center>
+            <ImageView fx:id="ivCity10" fitHeight="50.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/images%20(1).png" />
+               </image>
+            </ImageView>
+         </center>
+      </BorderPane>
+      <BorderPane layoutX="482.0" layoutY="162.0">
+         <center>
+            <ImageView fx:id="ivCity7" fitHeight="50.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/town-city.png" />
+               </image>
+            </ImageView>
+         </center>
+      </BorderPane>
+      <BorderPane layoutX="492.0" layoutY="67.0">
+         <center>
+            <ImageView fx:id="ivCity3" fitHeight="50.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/images.png" />
+               </image>
+            </ImageView>
+         </center>
+      </BorderPane>
+      <ToolBar layoutX="3.0" prefHeight="62.0" prefWidth="622.0">
+        <items>
+            <VBox>
+               <children>
+                  <Slider prefWidth="180.0">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Slider>
+                  <Label text="Velocidade" />
+               </children>
+               <padding>
+                  <Insets left="10.0" right="10.0" />
+               </padding>
+            </VBox>
+            <Button fx:id="startBtn" mnemonicParsing="false" onAction="#beginSimulation" text="Começar" />
+            <Label text="CUSTO ATUAL:">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblCost" text="XXX">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+        </items>
+         <padding>
+            <Insets bottom="10.0" left="40.0" right="40.0" top="10.0" />
+         </padding>
+      </ToolBar>
+      <Label layoutX="30.0" layoutY="397.0" text="CAMINHO:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblPath" layoutX="30.0" layoutY="417.0" prefHeight="50.0" prefWidth="561.0" wrapText="true" />
+      <Label layoutX="33.0" layoutY="133.0" text="Cidade 1">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="176.0" layoutY="133.0" text="Cidade 2">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="489.0" layoutY="118.0" text="Cidade 3">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="349.0" layoutY="177.0" text="Cidade 4">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="489.0" layoutY="212.0" text="Cidade 7">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="250.0" layoutY="239.0" text="Cidade 5">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="374.0" layoutY="292.0" text="Cidade 8">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="50.0" layoutY="292.0" text="Cidade 6">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="492.0" layoutY="342.0" text="Cidade 10">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="161.0" layoutY="367.0" text="Cidade 9">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+   </children>
+
+   <!-- create fx:define of all imageviews using fx:reference -->
+   <fx:define>
+      <ArrayList fx:id="ivCidades">
+         <fx:reference source="ivCity1" />
+         <fx:reference source="ivCity2" />
+         <fx:reference source="ivCity3" />
+         <fx:reference source="ivCity4" />
+         <fx:reference source="ivCity5" />
+         <fx:reference source="ivCity6" />
+         <fx:reference source="ivCity7" />
+         <fx:reference source="ivCity8" />
+         <fx:reference source="ivCity9" />
+         <fx:reference source="ivCity10" />
+      </ArrayList>
+   </fx:define>
+</Pane>
